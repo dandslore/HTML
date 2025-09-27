@@ -1,0 +1,65 @@
+body{
+    background-color: #FFB5C0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+h1{
+    text-align: center;
+    font-size: 70px
+}
+.subtitulo{
+    text-align: center;
+    background-color: #FFD1DC;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.cartoes{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cartao1, .cartao2, .cartao3 {
+    border-radius: 15px;
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px; 
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #FFB5C5;
+    padding: 10px;
+    text-align: center;
+    width: 33.33%;
+}
+
+th {
+    background-color: #FFD1DC;
+}
+
+
+img {
+    border-radius: 8px;
+}
+
+
+b {
+    color: #8B0000; 
+}
+
+i {
+    color: #555;
+}
