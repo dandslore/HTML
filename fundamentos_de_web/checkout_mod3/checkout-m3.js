@@ -2,6 +2,8 @@
 //Capturamos o botão de envio
 const somabtn = document.querySelector('#somarBtn')
 const diferencabtn = document.querySelector('#menosBtn')
+const vezesbtn = document.querySelector('#vezesBtn')
+const dividirbtn = document.querySelector('#dividirBtn')
 
 //Captura do elemento resultado para exemplo de utilização dos dados capturados
 const resultado = document.querySelector('#resultado')
@@ -29,6 +31,54 @@ diferencabtn.addEventListener("click",function(event){
     //Chamada da função
     diferenca(n1,n2);
 })
+
+//Adiciona ao botão de MULTIPLICAÇÃO um elemento de escuta de evento que procura um click para executar uma função
+vezesbtn.addEventListener("click", function(event) {
+    event.preventDefault()
+    
+    //Criação da variavel que vai capturar o valor do elemento com id numero1 e numero2
+    const n1 = document.querySelector('#numero1').value
+    const n2 = document.querySelector('#numero2').value
+
+    //Chamada da função
+    multiplicar(n1, n2);
+}) 
+
+//Adiciona ao botão de DIVISÃO um elemento de escuta de evento que procura um click para executar uma função
+dividirbtn.addEventListener("click", function(event) {
+    event.preventDefault()
+    
+    //Criação da variavel que vai capturar o valor do elemento com id numero1 e numero2
+    const n1 = document.querySelector('#numero1').value
+    const n2 = document.querySelector('#numero2').value
+
+    //Chamada da função
+    dividir(n1, n2);
+}) 
+
+// FUNÇÃO QUE IMPLEMENTA A MULTIPLICAÇÂO
+function multiplicar(n1, n2){
+
+    let N1 = parseFloat(n1);
+    let N2 = parseFloat(n2);
+    let R = N1 * N2;
+    
+    resultado.innerHTML = "Resultado: " + R;
+
+    window.alert("Resultado : " + R);
+}
+
+// FUNÇÃO QUE IMPLEMENTA A DIVISÃO
+function dividir(n1, n2){
+
+    let N1 = parseFloat(n1);
+    let N2 = parseFloat(n2);
+    let R = N1 / N2;
+
+    resultado.innerHTML = "Resultado: " + R;
+
+    window.alert("Resultado : " + R);
+}
 
 //Função que implenta a soma
 function soma(n1, n2){
